@@ -24,10 +24,9 @@ import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { buildConfig } from 'payload/config'
 import sharp from 'sharp'
 import { fileURLToPath } from 'url'
-import Users from './collections/Users';
-import Examples from './collections/Examples';
-import { samplePlugin } from '../../src/index'
-
+import Users from './src/collections/Users';
+import Examples from './src/collections/Examples';
+import { samplePlugin } from '../src/index'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
@@ -89,4 +88,8 @@ export default buildConfig({
   // This is temporary - we may make an adapter pattern
   // for this before reaching 3.0 stable
   sharp,
+
+  plugins: [
+    samplePlugin({enabled:true})
+  ]
 })
