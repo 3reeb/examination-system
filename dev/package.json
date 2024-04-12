@@ -2,7 +2,7 @@
   "name": "Payload2Blank",
   "description": "A blank template to get started with Payload",
   "version": "1.0.0",
-  "main": "dist/server.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
@@ -22,6 +22,7 @@
     "@payloadcms/db-mongodb": "3.0.0-beta.2",
     "@payloadcms/plugin-cloud": "^2.0.0",
     "@payloadcms/richtext-lexical": "3.0.0-beta.2",
+    "@payloadcms/translations":"3.0.0-beta.2",
     "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

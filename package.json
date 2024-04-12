@@ -27,7 +27,7 @@
     "payload": "^3.0.0-beta.2"
   },
   "devDependencies": {
-    "@payloadcms/eslint-config": "^3.0.0-beta.2",
+    "@payloadcms/eslint-config": "workspace:*",
     "@swc/jest": "^0.2.28",
     "@types/jest": "^29.5.11",
     "@typescript-eslint/eslint-plugin": "5.12.1",
@@ -42,13 +42,9 @@
     "prettier": "^2.7.1",
     "react": "^18.0.0",
     "typescript": "^4.8.4",
-    "webpack": "^5.90.3"
-  },
-  "exports": {
-    ".": {
-      "default": "./src/index.ts",
-      "types": "./src/index.ts"
-    }
+    "webpack": "^5.90.3",
+    "payload": "^3.0.0-beta.2"
+
   },
   "publishConfig": {
     "exports": null,

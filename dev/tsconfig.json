@@ -1,35 +1,54 @@
 {
-  "extends": "../../../tsconfig.json",
   "compilerOptions": {
+    "target": "es5",
     "baseUrl": ".",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "composite": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
     "esModuleInterop": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@payload-config": ["./payload.config.ts"]
-    }
+      "@/*": [
+        "./src/*"
+      ],
+      "@payload-config": [
+        "./payload.config.ts"
+      ]
+    },
+    "forceConsistentCasingInFileNames": true
   },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build"
+  ],
   "ts-node": {
     "transpileOnly": true,
     "swc": true
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts","src"],
-  "exclude": ["node_modules"]
+  }
 }

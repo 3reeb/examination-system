@@ -1,2 +1,2 @@
-export { model as examinationModel } from './plugin'
+export { model } from './plugin'
 export type { PluginTypes } from './types'

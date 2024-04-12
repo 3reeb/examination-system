@@ -26,13 +26,13 @@ import sharp from 'sharp'
 import { fileURLToPath } from 'url'
 import Users from './src/collections/Users';
 import Examples from './src/collections/Examples';
-import { samplePlugin } from '../src/index'
+import { model } from '../src/index'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
   //editor: slateEditor({}),
-  editor: lexicalEditor(),
+  editor: lexicalEditor({}),
   collections: [
     Users,
     Examples
@@ -90,6 +90,6 @@ export default buildConfig({
   sharp,
 
   plugins: [
-    samplePlugin({enabled:true})
+    // samplePlugin({enabled:true})
   ]
 })
